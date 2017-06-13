@@ -108,5 +108,59 @@ Además, he creado el archivo \texttt{.gitignore} para no guardar en GIT los arc
 
 En esta sección explicaré a grandes rasgos las cosas que más he utilizado en \LaTeX.
 
+\bigskip
+He usado \verb+\maketitle+ con los parámetros de \verb+\title+, \verb+\author+ y \verb+\date+ para crear la primera parte de este documento.
 
+\bigskip
+Además para poner todos estos comandos de \LaTeX, estoy usando \verb+\verb+. Si es para poner un comando de otras herramientas como GIT, he usado el comando de \verb+\texttt{<comando>}+.
+
+\bigskip
+Con esto mencionado, y usando el bloque de \verb+\begin{abstract} <resumen> \end{abstract}+, se crea el pequeño resumen que también se encuentra en la primera página de este documento.
+
+\bigskip
+Uso \verb+\tableofcontents+ para crear el índice. Además, he incluido el paquete \texttt{hiperref}, usando \verb+[hidelinks]+ para quitar el enlace en color rojo.
+
+\bigskip
+En general, uso \verb+\newpage+ para introducir un salto de página y \verb+\bigskip+ para crear una línea en blanco entre párrafos distintos, como se puede ver en esta parte del documento.
+
+\bigskip
+Uso los comandos de \verb+\section{<nombre_sección>}+, \verb+\subsection{nombre_subsección}+ y \verb+\subsubsection{nombre_subsubsección}+ para crear los apartados que funcionarán con el índice.
+
+\bigskip
+Además de eso, para crear un apartado de una lista de objetos, usaremos la siguiente estructura:
+\verb+\begin{itemize} \item <Nombre_item> \end{itemize}+, donde cada \verb+\item <Nombre_item>+ corresponde a una nueva línea que tendŕa la lista. 
+
+Un ejemplo realizado en este documento es en el apartado de introducción, cuando se especifican las 3 herramientas principales usadas en esta práctica.
+
+\bigskip
+Además de estos comandos principales, quiero destacar el uso de herramientas externas (make con F12), y snippets que he ido personalizando, y que son muy útiles para este desarrollo. Por ejemplo, un snippet que es ``sk'', que al usarlo se transforma en \verb+\bigskip+.
+
+\newpage
+\section{Python IDLE}
+Python IDLE es el entorno donde he desarrollado el código en python donde voy a comparar los dos algoritmos de ordenación.
+
+\bigskip
+\noindent Los dos algoritmos que he utilizado son:
+\begin{enumerate}
+
+\item \textbf{Burbuja}: Revisa cada elemento de la lista que va a ser ordenada con el siguiente, intercambiándolos de posición si están en el orden equivocado.
+
+\item \textbf{Quicksort}: Se basa en el algoritmo de divide y vencerás. Se basa en dividir el problema en dos mitades iguales, y hacer llamadas recursivas a si misma con cada una de estas partes, hasta llegar a un problema tan pequeño que sea directo.
+\end{enumerate}
+
+\noindent Para comprobar la potencia de estos algoritmos, se crea una lista aleatoria de números, de 0 a n-1. Siendo n el número total de elementos de la lista.
+
+\bigskip
+Como tamaños de entrada (el número n comentado anteriormente), tenemos los siguientes:
+
+500, 1000, 2000, 5000, 10000, 20000, 30000, 40000 y 50000.
+
+\bigskip
+Por último, usando la librería de python \texttt{matplotlib}, pintaré una gráfica de los resultados en tiempo obtenidos, usando la función time de la librería \texttt{time} de pyhton.
+
+\newpage
+\section{Conclusión}
+La herramienta de \LaTeX es bastante útil y con más experiencia y mucha práctica se pueden generar muy buenos documentos PDFs, y muy rápido.
+
+Cabe destacar, que funciones del gedit aprendidas en clase, como por ejemplo los snippets y las external tools de gedit, son muy muy útiles y un gran descubrimiento para el desarrollo de cualquier proyecto.
 \end{document}
