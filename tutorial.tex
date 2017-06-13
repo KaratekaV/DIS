@@ -44,6 +44,69 @@ En esta práctica, he usado 3 programas principalmente:
 
 \end{itemize}
 
+\newpage
+\section{GIT}
+Aquí se explicará los comandos mas utilizados, y como he planteado el desarrollo de este documento haciendo uso del control proporcionado por GIT.
+
+\subsection{git init}
+Usando el comando \texttt{git init <carpeta>} preparamos una carpeta con un proyecto de git vacío para comenzar a usar GIT.
+
+\bigskip
+En mi caso, he usado una carpeta nombrada por el nombre de ``DIS''.
+
+\subsection{git add}
+Usando el comando \texttt{git add <fichero>} añadimos ficheros al "index" (también conocido como HEAD). En este index, se hace una "previa" de como se encontrará la carpeta cuando hagamos un guardado real, usando el comando que se explicará mas adelante de \texttt{git commit}.
+
+\subsection{git commit}
+Usando el comando \texttt{git commit -m ``Mensaje del commit"}, se realizan los cambios definitivamente en el repositorio de GIT. Con el parámetro -m, introducimos un pequeño texto para tener una orientación de que ha realizado dicho guardado.
+
+\subsection{git checkout}
+El comando \texttt{git checkout}, sirve para cambiar entre distintas ramas del proyecto.
+
+\bigskip
+Además, también sirve para crear ramas usando \texttt{git checkout -b <nueva\_rama>}, o bien para borrarlas con \texttt{git checkout -d <rama\_a\_borrar>}.
+
+\subsection{git log}
+El comando \texttt{git log} muestra un pequeño resumen de los commits que han sido emitidos en la rama en la que te encuentres.
+
+\subsection{git status}
+El comando \texttt{git status} muestra el estado de los archivos que hay en la rama en la que te encuentres. Especifica si un archivo ha sido borrado, añadido o modificado desde el último commit realizado en esa misma rama.
+
+\subsection{gitg}
+Este comando lo usamos en el laboratorio de prácticas, y sirve para poder comprobar gráficamente como se encuentra el proyecto de GIT. Que ramas tiene, que archivos tiene cada rama, etc. Además de esto, también se puede hacer desde la herramienta gráfica los commits y otros comandos de GIT.
+
+\bigskip
+Sin embargo, yo no he podido usar esta herramienta gráfica, y por lo tanto he usado un repositorio remoto de github, creado especificamente para esto. Para realizar dicho repositorio:
+
+\subsubsection{GitHub}
+Primero, en la página de \texttt{github.com} he creado una cuenta (con nombre de usuario karatekav), y he creado un repositorio con el mismo nombre que tiene la carpeta que uso GIT, es decir, DIS.
+
+\subsubsection{Añadir el repositorio remoto}
+Una vez creado el repositorio, he añadido a la carpeta este mismo. Esto ha sido con el uso de: 
+
+\noindent\texttt{git remote add origin https://github.com/<nombre\_usuario>/<nombre\_rep>.git} 
+
+Que en mi caso específico ha sido: 
+
+\noindent\texttt{git remote add origin https://github.com/karatekav/DIS.git}.
+
+\subsubsection{Guardar en el repositorio remoto}
+Para guardar en el repositorio añadido como \texttt{origin}, es tan simple como realizar el comando de git push. Para ello:
+
+\noindent\texttt{git push origin <rama\_a\_guardar>}.
+
+Como la rama principal es master, la mayoría de guardados se realizaran con el siguiente comando:
+
+\noindent\texttt{git push origin master}.
+
+\subsection{Otros}
+Además, he creado el archivo \texttt{.gitignore} para no guardar en GIT los archivos que son necesarios para la creación del PDF autogenerados por el compilador de \LaTeX .
+
+\newpage
+
+\section{\LaTeX}
+
+En esta sección explicaré a grandes rasgos las cosas que más he utilizado en \LaTeX.
 
 
 \end{document}
